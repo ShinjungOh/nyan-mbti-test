@@ -2,9 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import MainImage from '../assets/black cat1.jpeg';
 import Button from 'react-bootstrap/Button';
+import {useNavigate} from 'react-router-dom';
 
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleClickButton = () => {
+        navigate('/question');
+    }
+
     return (
         <Wrapper>
             <Header>예비집사 판별기</Header>
@@ -19,7 +26,12 @@ const Home = () => {
                     />
                 </LogoImage>
                 <Description>MBTI를 기반으로 한 나와 잘 맞는 고양이 찾기 🐈</Description>
-                <Button>테스트 시작하기</Button>
+                <Button
+                    style={{fontFamily: "Cafe24Oneprettynight"}}
+                    onClick={handleClickButton}
+                >
+                    테스트 시작하기
+                </Button>
             </Content_wrapper>
         </Wrapper>
     );
@@ -37,6 +49,7 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Cafe24Oneprettynight";
 `
 
 const Content_wrapper = styled.div`
@@ -47,16 +60,18 @@ const Content_wrapper = styled.div`
 `
 
 const Title = styled.div`
-  font-size: 30px;
-  margin-top: 40px;
+  font-size: 2em;
+  margin-top: 2.2rem;
+  font-family: "Cafe24Oneprettynight";
 `
 
 const LogoImage = styled.div`
-  margin-top: 10px;
+  margin-top: 1em;
 `
 
 const Description = styled.div`
-  font-size: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-size: 1.1em;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-family: "Cafe24Oneprettynight";
 `

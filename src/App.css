@@ -1,0 +1,8 @@
+.App {
+    font-family: "Cafe24Oneprettynight";
+}
+
+@font-face {
+    font-family: "Cafe24Oneprettynight";
+    src: url(/src/assets/fonts/Cafe24Oneprettynight.ttf);
+}
