@@ -15,9 +15,6 @@ const Result = () => {
         setResultData(result);
     }, [mbti]);
 
-    console.log(mbti);
-    console.log(resultData);
-
 
     return (
         <Wrapper>
@@ -30,6 +27,7 @@ const Result = () => {
                         className="rounded-circle"
                         width={350}
                         height={350}
+                        alt="결과 이미지"
                     />
                 </LogoImage>
                 <Description>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Description>

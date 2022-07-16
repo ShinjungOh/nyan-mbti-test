@@ -4,13 +4,13 @@ import MainImage from '../assets/black cat1.jpeg';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom';
 
-
 const Home = () => {
     const navigate = useNavigate();
 
     const handleClickButton = () => {
         navigate('/question');
     }
+
 
     return (
         <Wrapper>
@@ -23,6 +23,7 @@ const Home = () => {
                         className="rounded-circle"
                         width={350}
                         height={350}
+                        alt="시작 이미지"
                     />
                 </LogoImage>
                 <Description>MBTI를 기반으로 한 나와 잘 맞는 고양이 찾기 🐈</Description>

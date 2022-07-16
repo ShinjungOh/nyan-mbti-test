@@ -14,9 +14,6 @@ const Question = () => {
         {id: "JP", score: 0},
     ]);
 
-    // console.log('totalScore: ', totalScore);
-    // console.log('type: ', QuestionData[questionNum].type);
-
     const handleClickButton = (num, type) => {
         const newScore = totalScore.map(e =>
             e.id === type ? {id: e.id, score: e.score + num} : e
