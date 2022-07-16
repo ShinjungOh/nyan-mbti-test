@@ -20,7 +20,6 @@ const Question = () => {
         );
 
         setTotalScore(newScore);
-        console.log('newScore:', newScore);
 
         if (QuestionData.length !== questionNum + 1) {
             setQuestionNum(questionNum + 1);
@@ -28,7 +27,6 @@ const Question = () => {
             const mbti = newScore.reduce((acc, curr) =>
                 acc + (curr.score >= 2 ? curr.id.substring(0, 1) : curr.id.substring(1, 2)), ""
             );
-            console.log('mbti', mbti);
 
             navigate({
                 pathname: '/result',
@@ -42,9 +40,9 @@ const Question = () => {
 
     return (
         <Wrapper>
-            <ProgressBar
+            <ProgressBarStyled
                 striped variant="danger"
-                style={{marginTop: '15px', width: '100%'}} now={(questionNum / QuestionData.length) * 100}
+                now={(questionNum / QuestionData.length) * 100}
             />
             <Title>{QuestionData[questionNum].title}</Title>
             <Button_wrapper>
@@ -52,18 +50,20 @@ const Question = () => {
                     onClick={() => handleClickButton(1, QuestionData[questionNum].type)}
                     style={{
                         height: "5em",
-                        minWidth: "20em",
-                        maxWidth: "20em",
-                        fontSize: "1em"
+                        minWidth: "22em",
+                        maxWidth: "22em",
+                        fontSize: "1em",
+                        backgroundColor: "#ff815a", border: "none"
                     }}>{QuestionData[questionNum].answera}</Button>
                 <Button
                     onClick={() => handleClickButton(0, QuestionData[questionNum].type)}
                     style={{
                         height: "5em",
-                        minWidth: "20em",
-                        maxWidth: "20em",
+                        minWidth: "22em",
+                        maxWidth: "22em",
                         fontSize: "1em",
-                        marginTop: "1em"
+                        marginTop: "1em",
+                        backgroundColor: "#ff815a", border: "none"
                     }}>{QuestionData[questionNum].answerb}</Button>
             </Button_wrapper>
         </Wrapper>
@@ -75,6 +75,8 @@ export default Question;
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: #faeedb;
+  padding-top: 15px;
 `
 
 const Title = styled.div`
@@ -82,6 +84,9 @@ const Title = styled.div`
   text-align: center;
   font-family: "Cafe24Oneprettynight";
   margin-top: 2.5em;
+  background-color: #faeedb;
+  padding-right: 1rem;
+  padding-left: 1rem;
 `
 
 const Button_wrapper = styled.div`
@@ -89,6 +94,13 @@ const Button_wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 13rem;
+  margin-top: 10rem;
   font-family: "Cafe24Oneprettynight";
+`
+
+const ProgressBarStyled = styled(ProgressBar)`
+  margin-top: 0.2rem; 
+  width: 100%;
+  color: #faeedb;
+  background-color: #eeeeee;
 `

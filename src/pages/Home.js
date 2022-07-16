@@ -28,7 +28,7 @@ const Home = () => {
                 </LogoImage>
                 <Description>MBTI를 기반으로 한 나와 잘 맞는 고양이 찾기 🐈</Description>
                 <Button
-                    style={{fontFamily: "Cafe24Oneprettynight"}}
+                    style={{fontFamily: "Cafe24Oneprettynight", backgroundColor: "#ff815a", border: "none"}}
                     onClick={handleClickButton}
                 >
                     테스트 시작하기
@@ -43,6 +43,7 @@ export default Home;
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: #faeedb;
 `
 
 const Header = styled.div`
@@ -51,6 +52,8 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Cafe24Oneprettynight";
+  background-color: rgba(255, 181, 122, 0.79);
+
 `
 
 const Content_wrapper = styled.div`

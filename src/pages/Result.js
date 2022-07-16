@@ -30,9 +30,11 @@ const Result = () => {
                         alt="결과 이미지"
                     />
                 </LogoImage>
-                <Description>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다.</Description>
+                <Description>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다. <br/><br/>
+                    {resultData.desc}
+                </Description>
                 <Button
-                    style={{fontFamily: "Cafe24Oneprettynight"}}
+                    style={{fontFamily: "Cafe24Oneprettynight", backgroundColor: "#ff815a", border: "none"}}
                     onClick={() => navigate('/')}
                 >
                     테스트 다시하기
@@ -48,6 +50,7 @@ export default Result;
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: #faeedb;
 `
 
 const Header = styled.div`
@@ -56,6 +59,7 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Cafe24Oneprettynight";
+  background-color: rgb(255, 181, 122);
 `
 
 const Content_wrapper = styled.div`
@@ -80,4 +84,7 @@ const Description = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   font-family: "Cafe24Oneprettynight";
+  text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 `
