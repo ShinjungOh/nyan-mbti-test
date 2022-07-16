@@ -15,7 +15,7 @@ const Home = () => {
     return (
         <Wrapper>
             <Header>예비집사 판별기</Header>
-            <Content_wrapper>
+            <ContentWrapper>
                 <Title>나에게 맞는 주인님은?</Title>
                 <LogoImage>
                     <img
@@ -33,7 +33,7 @@ const Home = () => {
                 >
                     테스트 시작하기
                 </Button>
-            </Content_wrapper>
+            </ContentWrapper>
         </Wrapper>
     );
 }
@@ -56,7 +56,7 @@ const Header = styled.div`
 
 `
 
-const Content_wrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -45,7 +45,7 @@ const Question = () => {
                 now={(questionNum / QuestionData.length) * 100}
             />
             <Title>{QuestionData[questionNum].title}</Title>
-            <Button_wrapper>
+            <ButtonWrapper>
                 <Button
                     onClick={() => handleClickButton(1, QuestionData[questionNum].type)}
                     style={{
@@ -65,7 +65,7 @@ const Question = () => {
                         marginTop: "1em",
                         backgroundColor: "#ff815a", border: "none"
                     }}>{QuestionData[questionNum].answerb}</Button>
-            </Button_wrapper>
+            </ButtonWrapper>
         </Wrapper>
     )
 }
@@ -89,7 +89,7 @@ const Title = styled.div`
   padding-left: 1rem;
 `
 
-const Button_wrapper = styled.div`
+const ButtonWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

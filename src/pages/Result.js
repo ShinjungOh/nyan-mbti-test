@@ -19,7 +19,7 @@ const Result = () => {
     return (
         <Wrapper>
             <Header>예비집사 판별기</Header>
-            <Content_wrapper>
+            <ContentWrapper>
                 <Title>결과 보기</Title>
                 <LogoImage>
                     <img
@@ -39,7 +39,7 @@ const Result = () => {
                 >
                     테스트 다시하기
                 </Button>
-            </Content_wrapper>
+            </ContentWrapper>
         </Wrapper>
     )
 }
@@ -62,7 +62,7 @@ const Header = styled.div`
   background-color: rgb(255, 181, 122);
 `
 
-const Content_wrapper = styled.div`
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
