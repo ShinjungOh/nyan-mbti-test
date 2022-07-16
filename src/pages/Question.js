@@ -1,19 +1,63 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
 import {ProgressBar, Button} from 'react-bootstrap';
 import {QuestionData} from '../assets/data/questiondata';
 
 const Question = () => {
+    const navigate = useNavigate();
+    const [questionNum, setQuestionNum] = useState(0);
+    const [totalScore, setTotalScore] = useState([
+        {id: "EI", score: 0},
+        {id: "SN", score: 0},
+        {id: "TF", score: 0},
+        {id: "JP", score: 0},
+    ]);
+
+    // console.log('totalScore: ', totalScore);
+    // console.log('type: ', QuestionData[questionNum].type);
+
+    const handleClickButton = (num, type) => {
+        const newScore = totalScore.map(e =>
+            e.id === type ? {id: e.id, score: e.score + num} : e
+        );
+
+        setTotalScore(newScore);
+        console.log('newScore:', newScore);
+
+        if (QuestionData.length !== questionNum + 1) {
+            setQuestionNum(questionNum + 1);
+        } else {
+            navigate('/result');
+        }
+    }
+
+
     return (
         <Wrapper>
             <ProgressBar
-                className="progress-bar progress-bar-striped bg-danger" role="progressbar"
-                style={{marginTop: '15px'}}
+                striped variant="danger"
+                style={{marginTop: '15px', width: '100%'}} now={(questionNum / QuestionData.length) * 100}
             />
-            <Title>{QuestionData[0].title}</Title>
+            <Title>{QuestionData[questionNum].title}</Title>
             <Button_wrapper>
-                <Button style={{height: "5em", minWidth: "14em", fontSize: "1em"}}>{QuestionData[0].answera}</Button>
-                <Button style={{height: "5em", minWidth: "14em", fontSize: "1em", marginTop: "1em"}}>{QuestionData[0].answerb}</Button>
+                <Button
+                    onClick={() => handleClickButton(1, QuestionData[questionNum].type)}
+                    style={{
+                        height: "5em",
+                        minWidth: "20em",
+                        maxWidth: "20em",
+                        fontSize: "1em"
+                    }}>{QuestionData[questionNum].answera}</Button>
+                <Button
+                    onClick={() => handleClickButton(0, QuestionData[questionNum].type)}
+                    style={{
+                        height: "5em",
+                        minWidth: "20em",
+                        maxWidth: "20em",
+                        fontSize: "1em",
+                        marginTop: "1em"
+                    }}>{QuestionData[questionNum].answerb}</Button>
             </Button_wrapper>
         </Wrapper>
     )
@@ -30,6 +74,7 @@ const Title = styled.div`
   font-size: 2.3em;
   text-align: center;
   font-family: "Cafe24Oneprettynight";
+  margin-top: 2.5em;
 `
 
 const Button_wrapper = styled.div`
@@ -37,5 +82,6 @@ const Button_wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 13rem;
   font-family: "Cafe24Oneprettynight";
 `
