@@ -25,8 +25,8 @@ const Result = () => {
                     <img
                         src={resultData.image}
                         className="rounded-circle"
-                        width={350}
-                        height={350}
+                        width={320}
+                        height={320}
                         alt="결과 이미지"
                     />
                 </LogoImage>
@@ -34,7 +34,13 @@ const Result = () => {
                     {resultData.desc}
                 </Description>
                 <Button
-                    style={{fontFamily: "Cafe24Oneprettynight", backgroundColor: "#ff815a", border: "none"}}
+                    style={{
+                        fontFamily: "Cafe24Oneprettynight",
+                        backgroundColor: "#ff815a",
+                        border: "none",
+                        marginTop: "1rem",
+                        marginBottom: "7em"
+                    }}
                     onClick={() => navigate('/')}
                 >
                     테스트 다시하기
@@ -67,6 +73,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #faeedb;
 `
 
 const Title = styled.div`

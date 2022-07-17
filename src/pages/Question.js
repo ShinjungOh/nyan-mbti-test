@@ -50,20 +50,24 @@ const Question = () => {
                     onClick={() => handleClickButton(1, QuestionData[questionNum].type)}
                     style={{
                         height: "5em",
-                        minWidth: "22em",
-                        maxWidth: "22em",
+                        minWidth: "20em",
+                        maxWidth: "20em",
                         fontSize: "1em",
-                        backgroundColor: "#ff815a", border: "none"
+                        backgroundColor: "#ff815a",
+                        border: "none",
+                        boxShadow: 'unset',
                     }}>{QuestionData[questionNum].answera}</Button>
                 <Button
                     onClick={() => handleClickButton(0, QuestionData[questionNum].type)}
                     style={{
                         height: "5em",
-                        minWidth: "22em",
-                        maxWidth: "22em",
+                        minWidth: "20em",
+                        maxWidth: "20em",
                         fontSize: "1em",
                         marginTop: "1em",
-                        backgroundColor: "#ff815a", border: "none"
+                        backgroundColor: "#ff815a",
+                        border: "none",
+                        boxShadow: 'unset',
                     }}>{QuestionData[questionNum].answerb}</Button>
             </ButtonWrapper>
         </Wrapper>
@@ -83,7 +87,7 @@ const Title = styled.div`
   font-size: 2.3em;
   text-align: center;
   font-family: "Cafe24Oneprettynight";
-  margin-top: 2.5em;
+  margin-top: 2em;
   background-color: #faeedb;
   padding-right: 1rem;
   padding-left: 1rem;
@@ -94,13 +98,15 @@ const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
+  margin-top: 8rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   font-family: "Cafe24Oneprettynight";
 `
 
 const ProgressBarStyled = styled(ProgressBar)`
-  margin-top: 0.2rem; 
+  margin-top: 0.2rem;
   width: 100%;
   color: #faeedb;
-  background-color: #eeeeee;
+  background-color: #fffafa;
 `

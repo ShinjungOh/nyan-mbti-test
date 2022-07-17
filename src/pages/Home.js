@@ -21,14 +21,19 @@ const Home = () => {
                     <img
                         src={MainImage}
                         className="rounded-circle"
-                        width={350}
-                        height={350}
+                        width={320}
+                        height={320}
                         alt="시작 이미지"
                     />
                 </LogoImage>
                 <Description>MBTI를 기반으로 한 나와 잘 맞는 고양이 찾기 🐈</Description>
                 <Button
-                    style={{fontFamily: "Cafe24Oneprettynight", backgroundColor: "#ff815a", border: "none"}}
+                    style={{
+                        fontFamily: "Cafe24Oneprettynight",
+                        backgroundColor: "#ff815a",
+                        border: "none",
+                        marginBottom: "7em"
+                    }}
                     onClick={handleClickButton}
                 >
                     테스트 시작하기
@@ -53,7 +58,6 @@ const Header = styled.div`
   align-items: center;
   font-family: "Cafe24Oneprettynight";
   background-color: rgba(255, 181, 122, 0.79);
-
 `
 
 const ContentWrapper = styled.div`
@@ -61,6 +65,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #faeedb;
 `
 
 const Title = styled.div`
