@@ -84,7 +84,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.div`
-  height: 110px;
+  height: auto;
   font-size: 2.3em;
   text-align: center;
   font-family: "Cafe24Oneprettynight";
@@ -99,9 +99,10 @@ const ButtonWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 120px;
   font-family: "Cafe24Oneprettynight";
 `
 
