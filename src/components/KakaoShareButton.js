@@ -33,7 +33,7 @@ const KakaoShareButton = ({data}) => {
 
     useEffect(() => {
         Kakao.cleanup();
-        Kakao.init(process.env.REACT_APP_KAKAO_JAVASCRIPT_KEY);
+        Kakao.init('12d9facdb5d851b4cce6bfd29fec90c6');
     }, []);
 
 
