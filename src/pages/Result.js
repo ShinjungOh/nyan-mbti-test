@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button';
 import {useNavigate, useSearchParams} from 'react-router-dom';
 import {ResultData} from '../assets/data/resultdata';
+import KakaoShareButton from '../components/KakaoShareButton';
 
 const Result = () => {
     const navigate = useNavigate();
@@ -33,18 +34,21 @@ const Result = () => {
                 <Description>예비 집사님과 찰떡궁합인 고양이는 {resultData.name}입니다. <br/><br/>
                     {resultData.desc}
                 </Description>
-                <Button
-                    style={{
-                        fontFamily: "Cafe24Oneprettynight",
-                        backgroundColor: "#ff815a",
-                        border: "none",
-                        marginTop: "1rem",
-                        marginBottom: "7em"
-                    }}
-                    onClick={() => navigate('/')}
-                >
-                    테스트 다시하기
-                </Button>
+                <ButtonWrapper>
+                    <Button
+                        style={{
+                            fontFamily: "Cafe24Oneprettynight",
+                            backgroundColor: "#ff815a",
+                            border: "none",
+                            marginTop: "1rem",
+                            marginBottom: "7em",
+                        }}
+                        onClick={() => navigate('/')}
+                    >
+                        테스트 다시하기
+                    </Button>
+                    <KakaoShareButton/>
+                </ButtonWrapper>
             </ContentWrapper>
         </Wrapper>
     )
@@ -94,4 +98,9 @@ const Description = styled.div`
   text-align: center;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+`
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
 `
