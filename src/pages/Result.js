@@ -47,7 +47,7 @@ const Result = () => {
                     >
                         테스트 다시하기
                     </Button>
-                    <KakaoShareButton/>
+                    <KakaoShareButton data={resultData}/>
                 </ButtonWrapper>
             </ContentWrapper>
         </Wrapper>
