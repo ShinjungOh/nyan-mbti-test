@@ -84,6 +84,7 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.div`
+  height: 110px;
   font-size: 2.3em;
   text-align: center;
   font-family: "Cafe24Oneprettynight";

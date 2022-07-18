@@ -11,8 +11,8 @@ const KakaoShareButton = ({data}) => {
         Kakao.Share.sendDefault({
             objectType: 'feed',
             content: {
-                title: '예비집사 판별기 결과',
-                description: `예비 집사님이 고양이를 키운다면 가장 잘 맞는 고양이는 ${data.name}입니다.`,
+                title: '예비집사 판별기 결과 🐈',
+                description: `예비 집사님과 찰떡궁합인 고양이는 ${data.name}입니다.`,
                 imageUrl: url + data.image,
                 link: {
                     mobileWebUrl: resultUrl,
@@ -21,7 +21,7 @@ const KakaoShareButton = ({data}) => {
             },
             buttons: [
                 {
-                    title: '테스트 하러가기',
+                    title: '테스트 하러가기 👈',
                     link: {
                         mobileWebUrl: resultUrl,
                         webUrl : resultUrl,
@@ -46,6 +46,7 @@ const KakaoShareButton = ({data}) => {
                 marginTop: "1rem",
                 marginBottom: "7em",
                 marginLeft: "0.8rem",
+                boxShadow: 'unset',
             }}
             onClick={shareKakao}
         >
